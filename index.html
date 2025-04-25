@@ -1,19 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <link rel="stylesheet" href="screen.css">
-  </head>
-  <body>
-    <h1>Home</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-    </nav>
-    <script src="index.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>New Boston, IL Storm Reports</title>
+  <link rel="stylesheet" href="screen.css"/>
+</head>
+<body>
+  <div class="header">
+    <h1>New Boston, IL Storm Reports</h1>
+    <p>Please select a marker to see more information for that report</p>
+  </div>
+  
+  <div class="dashboard">
+    <img src="Basemap.png" alt="Map" class="map"/>
+
+    <img src="Legend.png" alt="Legend" class="legend"/>
+
+
+    <div class="marker red" style="top: 200px; left: 420px;" onclick="toggleInfo('info1')"></div>
+    <div class="marker red" style="top: 140px; left: 370px;" onclick="toggleInfo('info2')"></div>
+    <div class="marker orange" style="top: 230px; left: 350px;" onclick="toggleInfo('info3')"></div>
+    <div class="marker orange" style="top: 300px; left: 270px;" onclick="toggleInfo('info4')"></div>
+    <div class="marker green" style="top: 260px; left: 500px;" onclick="toggleInfo('info5')"></div>
+    <div class="marker green" style="top: 340px; left: 470px;" onclick="toggleInfo('info6')"></div>
+
+
+    <div class="info-box" id="info1">
+      <strong>14571 90th St</strong><br>
+      Status: Awaiting Response<br>
+      Severity: High<br>
+      Structural Issues: Yes<br>
+      Notes: Tree on roof, power lines down.
+    </div>
+
+    <div class="info-box" id="info2">
+      <strong>2401 170th St</strong><br>
+      Status: Awaiting Response<br>
+      Severity: High<br>
+      Structural Issues: Yes<br>
+      Notes: Barn roof collapse.
+    </div>
+
+    <div class="info-box" id="info3">
+      <strong>302 Main St</strong><br>
+      Status: In Progress<br>
+      Severity: Medium<br>
+      Structural Issues: No<br>
+      Notes: Windows shattered.
+    </div>
+
+    <div class="info-box" id="info4">
+      <strong>1800 95th Ave</strong><br>
+      Status: In Progress<br>
+      Severity: Medium<br>
+      Structural Issues: No<br>
+      Notes: Fence damage, trees blocking road.
+    </div>
+
+    <div class="info-box" id="info5">
+      <strong>821 175th Ave</strong><br>
+      Status: Resolved<br>
+      Severity: Low<br>
+      Structural Issues: No<br>
+      Notes: Minor siding damage.
+    </div>
+
+    <div class="info-box" id="info6">
+      <strong>1999 75th St</strong><br>
+      Status: Resolved<br>
+      Severity: Low<br>
+      Structural Issues: No<br>
+      Notes: Gutter cleared, all safe.
+    </div>
+  </div>
+
+  <script>
+    let currentOpen = null;
+  
+    function toggleInfo(id) {
+      const box = document.getElementById(id);
+  
+      if (currentOpen === id && box.style.display === 'block') {
+        box.style.display = 'none';
+        currentOpen = null;
+      } else {
+        document.querySelectorAll('.info-box').forEach(el => el.style.display = 'none');
+        box.style.display = 'block';
+        currentOpen = id;
+      }
+    }
+  </script>
+</body>
 </html>
+

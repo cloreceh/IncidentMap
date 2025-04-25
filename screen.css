@@ -1,4 +1,77 @@
-/* Add screen styles below */
-a.active {
-    font-weight: bold;
-}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #1c1c1c, #2c2c2c, #3a3a3a);
+    color: white;
+  }
+  
+  .header {
+    text-align: center;
+    padding: 20px 10px 10px;
+    background: linear-gradient(to right, #3f3f3f, #5c5c5c);
+    border-bottom: 2px solid #888;
+  }
+  
+  .header h1 {
+    margin: 0;
+    font-size: 28px;
+  }
+  
+  .header p {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #ccc;
+  }
+  
+  .dashboard {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .map {
+    width: 100%;
+    display: block;
+  }
+  
+  .legend {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 250px;
+  }
+  
+  .marker {
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    position: absolute;
+    cursor: pointer;
+  }
+  
+  .marker.red {
+    background-image: url('marker-red.png');
+  }
+  
+  .marker.orange {
+    background-image: url('marker-orange.png');
+  }
+  
+  .marker.green {
+    background-image: url('marker-green.png');
+  }
+  
+  .info-box {
+    position: absolute;
+    top: 80px;
+    left: 100px;
+    background: rgba(0, 0, 0, 0.85);
+    border: 1px solid #777;
+    padding: 10px;
+    max-width: 250px;
+    display: none;
+    z-index: 10;
+    border-radius: 6px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+  }  

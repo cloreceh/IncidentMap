@@ -1,2 +1,2 @@
-# Static HTML Boilerplate
-Basic HTML, CSS, and JavaScript setup for a simple website.
+# Incident Map
+Simple Website/Dashboard to view storm reports and status
