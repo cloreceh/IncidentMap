@@ -42,6 +42,16 @@ body {
     width: 250px;
   }
   
+  .storm-track {
+    position: absolute;
+    top: 150px;
+    left: 300px;
+    width: 250px;
+    height: auto;
+    pointer-events: none;
+    opacity: 0.8;
+  }
+
   .marker {
     width: 20px;
     height: 20px;
